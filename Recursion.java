@@ -9,7 +9,7 @@ public class Recursion {
       return sqrtHelpM(n,1,tolerance);
     }
 
-    public static double sqrtHelpM(double n, double guess, double tolerance) {
+    private static double sqrtHelpM(double n, double guess, double tolerance) {
       if (n == 0) return 0;
       if (n == 1) return 1;
       if (Math.abs((guess * guess - n)/n) >= tolerance) {
@@ -17,8 +17,6 @@ public class Recursion {
       }
       return guess;
     }
-
-
 
    /*Recursively find the n'th fibbonaci number in linear time
     *fib(0) = 1; fib(1) = 1; fib(5) = 5
@@ -38,9 +36,15 @@ public class Recursion {
    *1 to n inclusive in an ArrayList of integers
    *precondition: n is non-negative
    */
-  // public static ArrayList<Integer> makeAllSums(int num){
+   public static ArrayList<Integer> makeAllSums(int num){
+     ArrayList<Integer> ansList = new ArrayList<Integer>();
+     makeAllSumsHelpM();
+     return ansList;
+   }
 
-//   }
+   private static void makeAllSumsHelpM() {
+     
+   }
 
    public static void main(String[] args) {
      System.out.println("Testing sqrt method:");
@@ -56,7 +60,6 @@ public class Recursion {
      System.out.println("fib(5) = 5: " + fib(5));
      System.out.println("fib(8) = 21: " + fib(8));
      System.out.println("fib(10) = 55: " + fib(10));
-
    }
 
 }
