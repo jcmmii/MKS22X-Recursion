@@ -36,14 +36,18 @@ public class Recursion {
    *1 to n inclusive in an ArrayList of integers
    *precondition: n is non-negative
    */
-   public static ArrayList<Integer> makeAllSums(int num){
+   public static ArrayList<Integer> makeAllSums(int n){
      ArrayList<Integer> ansList = new ArrayList<Integer>();
-     makeAllSumsHelpM();
+     makeAllSumsHelpM(n,0,ansList);
      return ansList;
    }
 
-   private static void makeAllSumsHelpM() {
-     
+   private static void makeAllSumsHelpM(int n, int sum, ArrayList<Integer> sums) {
+     if (n==0) sums.add(sum);
+     makeAllSumsHelpM(n-1,sum,sums);
+     makeAllSumsHelpM(n-1,sums+n,sums);
+   }
+
    }
 
    public static void main(String[] args) {
