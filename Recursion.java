@@ -5,9 +5,9 @@ public class Recursion {
      *precondition: n is non-negative
 
     */
-  //  public static double sqrt(double n, double tolerance){
+    public static double sqrt(double n, double tolerance){
 
-//    }
+    }
 
     /*Recursively find the n'th fibbonaci number in linear time
     *fib(0) = 1; fib(1) = 1; fib(5) = 5
@@ -33,13 +33,13 @@ public class Recursion {
 
    public static void main(String[] args) {
      System.out.println("Testing fib method:");
-     System.out.println("fib(0): " + fib(0));
-     System.out.println("fib(1): " + fib(1));
-     System.out.println("fib(2): " + fib(2));
-     System.out.println("fib(3): " + fib(3));
-     System.out.println("fib(4): " + fib(4));
-     System.out.println("fib(5): " + fib(5));
-     System.out.println("fib(10): " + fib(10));
+     System.out.println("fib(0) = 0: " + fib(0));
+     System.out.println("fib(1) = 1: " + fib(1));
+     System.out.println("fib(2) = 1: " + fib(2));
+     System.out.println("fib(3) = 2: " + fib(3));
+     System.out.println("fib(4) = 3: " + fib(4));
+     System.out.println("fib(5) = 5: " + fib(5));
+     System.out.println("fib(10) = 55: " + fib(10));
    }
 
 }
