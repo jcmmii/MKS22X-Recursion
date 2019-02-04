@@ -44,18 +44,19 @@ public class Recursion {
 
    private static void makeAllSumsHelpM(int n, int sum, ArrayList<Integer> sums) {
      if (n==0) sums.add(sum);
-     makeAllSumsHelpM(n-1,sum,sums);
-     makeAllSumsHelpM(n-1,sums+n,sums);
-   }
-
+     if (n != 0) {
+       makeAllSumsHelpM(n-1,sum,sums);
+       makeAllSumsHelpM(n-1,sum+n,sums);
+     }
    }
 
    public static void main(String[] args) {
-     System.out.println("Testing sqrt method:");
+     System.out.println("Testing sqrt method");
      System.out.println("sqrt(2,.0000001) = 1.4142: " + sqrt(2, .0000001));
      System.out.println("sqrt(100,.0000001) = 10: " + sqrt(100, .0000001));
      System.out.println("sqrt(49,.0000001) = 7: " + sqrt(49,.0000001));
-     System.out.println("\nTesting fib method:");
+
+     System.out.println("\nTesting fib method");
      System.out.println("fib(0) = 0: " + fib(0));
      System.out.println("fib(1) = 1: " + fib(1));
      System.out.println("fib(2) = 1: " + fib(2));
@@ -64,6 +65,12 @@ public class Recursion {
      System.out.println("fib(5) = 5: " + fib(5));
      System.out.println("fib(8) = 21: " + fib(8));
      System.out.println("fib(10) = 55: " + fib(10));
+
+     System.out.println("\nTesting makeAllSums method");
+     System.out.println("makeAllSums(3): [0, 3, 2, 5, 1, 4, 3, 6]");
+     System.out.println(makeAllSums(3));
+     System.out.println("makeAllSums(2): [0,1,2,3]");
+     System.out.println(makeAllSums(2));
    }
 
 }
